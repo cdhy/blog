@@ -36,10 +36,13 @@ class CategoryController extends Controller
         $cate = new Category();
         if ($request->method() == 'POST'){
             $data = $request->input('data');
-                        foreach($data as $k => $v){
+            foreach($data as $k => $v){
+                //过滤两边的空格
+                if (is_string($v)){
+                    $v = trim($v);
+                }
                 $cate->$k = $v;
             }
-//            dd($data);
             if ($cate->save()){
                 return redirect()->back()->with('success',$data['name'].'添加成功!');
             }else{

@@ -50,23 +50,23 @@
 						<tr>
 							<td><input type="text" name="order" value="{{$category->order}}" style="width:40px;text-align:center"></td>
 							<td>{{$category->id}}</td>
-							<td>{{$category->name}}</td>
+							<td>{{$category->_name}}</td>
 							<td>{{$category->class}}</td>
 							<td>{{$category->cover}}</td>
 							<td>
 								{{--{{$category->type}}--}}
 								@if ($category->type == 'category')
-									<span class="label label-success">分类</span>
+									<span class="label label-default">分类</span>
 								@elseif  ($category->type == 'cover')
-									<span class="label label-success">封面</span>
-								@elseif ($category->type == 'specital')
+									<span class="label label-info">封面</span>
+								@elseif ($category->type == 'specail')
 									<span class="label label-success">专题</span>
 								@endif
 							</td>
 							<td>{{$category->template}}</td>
 							<td>{{$category->view}}</td>
 							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
+								<a href="" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
 								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
 							</td>
 						</tr>

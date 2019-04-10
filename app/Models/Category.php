@@ -90,7 +90,10 @@ class Category extends Model
         foreach ($obj as $v) {
             if ($v->pid == $pid) {
                 $v->lev   = $lev;
-                $v->_name = str_repeat("&nbsp;&nbsp;&nbsp;&nbsp;", $lev) . $v->name;
+                if ($pid == 0){
+                    $v->_name = '├ ' . $v->name;
+                }
+                $v->_name =  '├' .str_repeat("──", $lev) . $v->name;
                 $data[]   = $v;
                 self::CategoryOfList($obj, $v->id, $lev + 1);
             }
