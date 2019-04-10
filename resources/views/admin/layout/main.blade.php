@@ -32,7 +32,7 @@
   <![endif]-->
   @section("style")
   @show
-  <link rel="stylesheet" href="{{asset('assets/css/backend.css？0.1')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/backend.css?0.5')}}">
   <title>Blog后台管理 | @yield('title')</title>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -46,7 +46,6 @@
   @yield('content')
   <!-- /.content-wrapper -->
   @include('admin.layout.footer')
-
   <!-- Control Sidebar -->
   @include('admin.layout.setting')
   <!-- /.control-sidebar -->

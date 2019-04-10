@@ -1,10 +1,7 @@
 @extends('admin.layout.main')
-
 @section('title','分类列表')
 @section('style')
-
 @endsection
-
 @section('content')
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -48,7 +45,7 @@
 						</tr>
 						@foreach($data as $category)
 						<tr>
-							<td><input type="text" name="order" value="{{$category->order}}" style="width:40px;text-align:center"></td>
+							<td><input type="text" name="order" value="{{$category->order}}"  onchange="changeorder(this)" data-id="{{$category->id}}" style="width:40px;text-align:center"></td>
 							<td>{{$category->id}}</td>
 							<td>{{$category->_name}}</td>
 							<td>{{$category->class}}</td>
@@ -59,7 +56,7 @@
 									<span class="label label-default">分类</span>
 								@elseif  ($category->type == 'cover')
 									<span class="label label-info">封面</span>
-								@elseif ($category->type == 'specail')
+								@elseif ($category->type == 'special')
 									<span class="label label-success">专题</span>
 								@endif
 							</td>
@@ -82,4 +79,27 @@
     </section>
     <!-- /.content -->
   </div>
+@endsection
+@section('script')
+    <script>
+        function changeorder(obj){
+            var reg =  /^([1-9]\d*|[0]{1,1})$/;
+            var order = $(obj).val();
+            var id = $(obj).data('id');
+            if (!reg.test(order)){
+                alert("请输入有效数字");
+                return false;
+            }
+            var data= {
+                'id':id,
+                'order':order,
+                '_token':'{{csrf_token()}}'
+            };
+            $.post('{{route('adminCategoryChangeOrder')}}',data,function(d){
+                if (d.error){
+                    window.location.href = '{{Request::getUri()}}';
+                }
+            });
+        }
+    </script>
 @endsection

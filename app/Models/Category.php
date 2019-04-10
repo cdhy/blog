@@ -11,7 +11,7 @@ class Category extends Model
     protected $table = 'categories';
 
     protected $fillable = [
-        'name','pid','type','template','alias','class','cover','view','order'
+        'name','pid','type','template','alias','class','cover','view','order','isnav','status'
     ];
 
      public function article()
@@ -25,17 +25,17 @@ class Category extends Model
         $data = self::subTree($data);
 
         if ($category) {
-            $option = '<option value="0">┌顶级分类</option>';
+            $option = '<option value="0">|--顶级分类</option>';
         } else {
             $option = '';
         }
 
         foreach ($data as $k => $v) {
             if ($pid == $v['id']) {
-                $option .= '<option value="' . $v['id'] . '" selected >' .'├'. str_repeat('──', $v['lev']) . $v['name'] . '</option>';
+                $option .= '<option value="' . $v['id'] . '" selected >' .'|--'. str_repeat('--', $v['lev']) . $v['name'] . '</option>';
                 continue;
             }
-            $option .= '<option value="' . $v['id'] . '">'.'├'. str_repeat('──', $v['lev']) . $v['name'] . '</option>';
+            $option .= '<option value="' . $v['id'] . '">'.'|--'. str_repeat('--', $v['lev']) . $v['name'] . '</option>';
         }
         return $option;
     }
@@ -91,9 +91,9 @@ class Category extends Model
             if ($v->pid == $pid) {
                 $v->lev   = $lev;
                 if ($pid == 0){
-                    $v->_name = '├ ' . $v->name;
+                    $v->_name = '|-' . $v->name;
                 }
-                $v->_name =  '├' .str_repeat("──", $lev) . $v->name;
+                $v->_name =  '|-' .str_repeat("---", $lev) . $v->name;
                 $data[]   = $v;
                 self::CategoryOfList($obj, $v->id, $lev + 1);
             }

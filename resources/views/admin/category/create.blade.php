@@ -32,7 +32,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label for="catetgoryParent" class="col-sm-2 control-label w80">父分类</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <select name="data[pid]" id="catetgoryParent" class="form-control">
                                     {{!!$options!!}}
                                 </select>
@@ -40,14 +40,14 @@
                         </div>
                         <div class="form-group">
                             <label for="inputCatetgoryName" class="col-sm-2 control-label w80">分类名</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <input type="text" name="data[name]" class="form-control" id="inputCatetgoryName" placeholder="分类名">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputCatetgoryAlias" class="col-sm-2 control-label w80">别名</label>
-                            <div class="col-sm-10">
-                                <input type="text"  name="data[alias]" class="form-control" id="inputCatetgoryAlias" name="slug" placeholder="Category Slug">
+                            <div class="col-sm-8">
+                                <input type="text"  name="data[alias]" class="form-control" id="inputCatetgoryAlias" name="slug" placeholder="请输入分类别名,以英文或拼音为主">
                             </div>
                         </div>
                         <div class="form-group">
@@ -72,7 +72,7 @@
                         </div>
                         <div class="form-group">
                             <label for="catetgoryTemplate" class="col-sm-2 control-label w80">模版</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <input type="text" name="data[template]" id="catetgoryTemplate" class="form-control" placeholder="list.blade.php">
                                 {{--<select name="data[template]" id="catetgoryTemplate" class="form-control">--}}
                                     {{--<option value="list.blade.php">list.blade.php</option>--}}
@@ -83,37 +83,37 @@
                         </div>
                         <div class="form-group">
                             <label for="catetgoryeClass" class="col-sm-2 control-label w80">样式</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <input type="text" name="data[class]" id="catetgoryeClass" class="form-control" placeholder="分类样式">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="catetgoryeCover" class="col-sm-2 control-label w80">封面</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <input type="text" name="data[cover]" id="catetgoryeCover" class="form-control" placeholder="分类封面">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="catetgoryeClass" class="col-sm-2 control-label w80">查看次数</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <input type="number" name="data[view]" value="0" id="catetgoryeClass" class="form-control" placeholder="分类样式">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputCatetgoryDesc" class="col-sm-2 control-label w80">描述</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <input type="text" name="data[desc]" class="form-control" id="inputCatetgoryDesc" placeholder="分类描述">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputCatetgoryOrder" class="col-sm-2 control-label w80">排序</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <input type="number" name="data[order]" value="10" class="form-control" id="inputCatetgoryOrder" placeholder="分类描述">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="catetgoryIsnav" class="col-sm-2 control-label w80">导航栏显示</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <div class="radio-inline" id="catetgoryIsnav">
                                     <label>
                                         <input type="radio"  name="data[isnav]" value="1" checked="checked"> 是
@@ -128,7 +128,7 @@
                         </div>
                         <div class="form-group">
                             <label for="catetgoryStatus" class="col-sm-2 control-label w80">状态</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <div class="radio-inline" id="catetgoryStatus">
                                     <label>
                                         <input type="radio"  name="data[status]" value="1" checked="checked"> 启用
@@ -160,7 +160,7 @@
         </div>
     </section>
     <!-- /.content -->
-</div>
+ </div>
 @endsection
 @section('script')
 <script type="text/javascript" src="{{asset('vendor/iCheck/icheck.min.js')}}"></script>
@@ -173,7 +173,6 @@
             checkboxClass: 'icheckbox_minimal-blue',
             radioClass: 'iradio_minimal-blue'
         });
-
         $('.selectpicker').selectpicker();
 
         $.get('{{route('adminCategoryJsonShow')}}',function(data){

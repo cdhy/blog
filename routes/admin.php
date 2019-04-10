@@ -8,6 +8,7 @@ Route::group(['namespace'=>'Admin'],function(){
     Route::post('category/update/{id}',['uses'=>'CategoryController@update','as'=>'adminCategoryUpdate']);
     Route::get('category/show/{id}',['uses'=>'CategoryController@show','as'=>'adminCategoryShow']);
     Route::get('category/jsonshow',['uses'=>'CategoryController@jsonShow','as'=>'adminCategoryJsonShow']);
+    Route::post('category/changeorder',['uses'=>'CategoryController@changeorder','as'=>'adminCategoryChangeOrder']);
     Route::post('category/destory/{id}',['uses'=>'CategoryController@destory','as'=>'adminCategoryDestory']);
     Route::get('article',['uses'=>'ArticleController@index','as'=>'adminArticleIndex']);
     Route::get('article/create',['uses'=>'ArticleController@create','as'=>'adminArticleCreate']);
