@@ -15,7 +15,7 @@ class AdminsTableSeeder extends Seeder
         //`email`, `name`, `mobile`, `password`, `status`, `ip`, `avator`
         DB::table('admins')->insert([
             'email'    => '38668499@qq.com',
-            'name'     => 'Owner',
+            'name'     => 'huangyi',
             'mobile'   => '18627426019',
             'password' => bcrypt(123456),
             'status'   => 1,

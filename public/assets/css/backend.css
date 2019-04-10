@@ -1,0 +1,44 @@
+/*后台添加分类显示样式 */
+.listCategory {
+    min-height: 280px;
+}
+/*后台登录样式 */
+
+.login-logo {
+    margin-bottom: 0;
+}
+.form-control {
+    height: 36px;
+}
+.captcha {
+    pointer-events: auto;
+    height: 32px;
+}
+.login-box-msg {
+    padding-bottom: 10px;
+}
+/*添加文章样式*/
+.w80 {
+    width: 120px;
+}
+.mr80{
+    margin-left:80px;
+}
+/*缩略图样式*/
+ul.thumbnails {
+    max-height: 240px;
+    overflow-y: scroll;
+}
+.thumbnail {
+    margin-bottom: 0px;
+}
+.thumbnail img {
+    width: 110px;
+}
+#savebtn {
+    /* position:absolute;
+          top:0;
+          right:0;*/
+    text-align: center;
+}
+/*添加文件样式*/

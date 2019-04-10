@@ -30,9 +30,10 @@
   <script src="{{asset('vendor/html5/html5shiv.min.js')}}"></script>
   <script src="{{asset('vendor/html5/respond.min.js')}}"></script>
   <![endif]-->
-  <title>Blog后台管理 | @yield('title')</title>
   @section("style")
   @show
+  <link rel="stylesheet" href="{{asset('assets/css/backend.css？0.1')}}">
+  <title>Blog后台管理 | @yield('title')</title>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -67,11 +68,19 @@
 <script src="{{asset('vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('vendor/AdminLTE/js/adminlte.min.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('vendor/AdminLTE/js/demo.js')}}"></script>
 <script>
     $(document).ready(function () {
-        $('.sidebar-menu').tree()
+      $('.sidebar-menu').tree()
+        var AdminLTEOptions = {
+        //启用迷你侧边栏并固定
+        //如果固定布局和迷你侧边栏启用，
+        //则此选项被强制为真
+        sidebarExpandOnHover: true,
+        //BoxRefresh 插件
+        enableBoxRefresh: true,
+        //Bootstrap.js 提示工具
+        enableBSToppltip: true
+        };
     })
 </script>
 @section('script')

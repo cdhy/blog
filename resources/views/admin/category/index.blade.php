@@ -2,7 +2,7 @@
 
 @section('title','分类列表')
 @section('style')
-<link rel="stylesheet" href="{{asset('css/backend.css')}}">
+
 @endsection
 
 @section('content')
@@ -36,134 +36,42 @@
 				<table class="table table-hover">
 					<tbody>
 						<tr>
-							<th> <input type="checkbox" name="ids[]"></th>
+							<th> 排序</th>
 							<th>ID</th>
 							<th>分类名</th>
-							<th>图标</th>
+							<th>样式</th>
+							<th>封面</th>
 							<th>类型</th>
 							<th>模板</th>
+							<th>查看次数</th>
 							<th>操作</th>
 						</tr>
+						@foreach($data as $category)
 						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>1</td>
-							<td>|-LAMP</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">分类</span></td>
-							<td>default-list.blade.php</td>
+							<td><input type="text" name="order" value="{{$category->order}}" style="width:40px;text-align:center"></td>
+							<td>{{$category->id}}</td>
+							<td>{{$category->name}}</td>
+							<td>{{$category->class}}</td>
+							<td>{{$category->cover}}</td>
+							<td>
+								{{--{{$category->type}}--}}
+								@if ($category->type == 'category')
+									<span class="label label-success">分类</span>
+								@elseif  ($category->type == 'cover')
+									<span class="label label-success">封面</span>
+								@elseif ($category->type == 'specital')
+									<span class="label label-success">专题</span>
+								@endif
+							</td>
+							<td>{{$category->template}}</td>
+							<td>{{$category->view}}</td>
 							<td>
 								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
 								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
 							</td>
 						</tr>
-						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>2</td>
-							<td>|-新闻</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">封面</span></td>
-							<td>default-cover.blade.php</td>
-							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>3</td>
-							<td>|----Linux</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">分类</span></td>
-							<td>default-list.blade.php</td>
-							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>4</td>
-							<td>|----php</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">分类</span></td>
-							<td>default-list.blade.php</td>
-							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>5</td>
-							<td>|----Apache</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">分类</span></td>
-							<td>default-list.blade.php</td>
-							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>6</td>
-							<td>|----MySQL</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">分类</span></td>
-							<td>default-list.blade.php</td>
-							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>7</td>
-							<td>|----科技新闻</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">封面</span></td>
-							<td>default-cover.blade.php</td>
-							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>8</td>
-							<td>|----娱乐新闻</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">封面</span></td>
-							<td>default-cover.blade.php</td>
-							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>9</td>
-							<td>|----军事新闻</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">封面</span></td>
-							<td>default-cover.blade.php</td>
-							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="ids[]"></td>
-							<td>10</td>
-							<td>|----社会新闻</td>
-							<td><i class="fa fa-list"></i></td>
-							<td><span class="label label-success">封面</span></td>
-							<td>default-cover.blade.php</td>
-							<td>
-								<a href="" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
-							</td>
-						</tr>
+						@endforeach
+
 					</tbody>
 				</table>
             </div>
@@ -175,4 +83,3 @@
     <!-- /.content -->
   </div>
 @endsection
-
