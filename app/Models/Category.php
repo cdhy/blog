@@ -19,39 +19,15 @@ class Category extends Model
         return $this->hasMany('App\Models\Article', 'id');
     }
 
-    public static function CategoryOfOption($pid = 0, $category = true)
+    public static function CategoryOfOption($selected=0)
     {
-        $data = Category::all()->toArray();
-        $data = self::subTree($data);
-
-        if ($category) {
-            $option = '<option value="0">|--顶级分类</option>';
-        } else {
-            $option = '';
-        }
-
-        foreach ($data as $k => $v) {
-            if ($pid == $v['id']) {
-                $option .= '<option value="' . $v['id'] . '" selected >' .'|--'. str_repeat('--', $v['lev']) . $v['name'] . '</option>';
-                continue;
-            }
-            $option .= '<option value="' . $v['id'] . '">'.'|--'. str_repeat('--', $v['lev']) . $v['name'] . '</option>';
-        }
-        return $option;
-    }
-
-    private static function subTree($arr, $pid = 0, $lev = 0)
-    {
-        static $data = array();
-        foreach ($arr as $v) {
-            if ($v['pid'] == $pid) {
-                $v['lev'] = $lev;
-                $data[]   = $v;
-                self::subTree($arr, $v['id'], $lev + 1);
-            }
-        }
+        $arr = Category::where('status',1)->orderBy('order','desc')->get(['id','name','pid'])->toArray();
+        $arr = subTree($arr);
+        $data = categoryToOption($arr,$selected);
         return $data;
     }
+
+
 
     public static function CategoryOfSun($arr, $pid = 0)
     {

@@ -44,6 +44,7 @@
             <li class="@if (isComment(Route::currentRouteName())) active @endif" ><a href="{{route('adminCommentIndex')}}"><i class="fa fa-circle-o"></i> 评论</a></li>
             <li class="@if (isAdvert(Route::currentRouteName())) active @endif" ><a href="{{route('adminAdvertIndex')}}"><i class="fa fa-circle-o"></i> 广告</a></li>
             <li class="@if (isMotto(Route::currentRouteName())) active @endif" ><a href="{{route('adminMottoIndex')}}"><i class="fa fa-circle-o"></i> 格言</a></li>
+            <li class="@if (isMedia(Route::currentRouteName())) active @endif" ><a href="{{route('adminMediaIndex')}}"><i class="fa fa-circle-o"></i> 媒体</a></li>
           </ul>
         </li>
         <li class="treeview">

@@ -44,7 +44,13 @@ if (!function_exists('isContent')) {
             'adminMottoEdit',
             'adminMottoStore',
             'adminMottoUpdate',
-            'adminMottoDestory'
+            'adminMottoDestory',
+            'adminMediaIndex',
+            'adminMediaCreate',
+            'adminMediaEdit',
+            'adminMediaStore',
+            'adminMediaUpdate',
+            'adminMediaDestory'
         ];
         return in_array($route, $data);
     }
@@ -135,6 +141,21 @@ if (!function_exists('isMotto')) {
             'adminMottoStore',
             'adminMottoUpdate',
             'adminMottoDestory'
+        ];
+        return in_array($route, $data);
+    }
+}
+
+if (!function_exists('isMedia')) {
+    function isMedia($route)
+    {
+        $data = [
+            'adminMediaIndex',
+            'adminMediaCreate',
+            'adminMediaEdit',
+            'adminMediaStore',
+            'adminMediaUpdate',
+            'adminMediaDestory'
         ];
         return in_array($route, $data);
     }

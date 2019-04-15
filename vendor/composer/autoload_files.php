@@ -21,4 +21,5 @@ return array(
     '0d8253363903f0ac7b0978dcde4e28a0' => $vendorDir . '/beyondcode/laravel-dump-server/helpers.php',
     '1b4ac127c120eb2a9028a5cab6f169b0' => $baseDir . '/app/Helps/active.php',
     '4b2d74ec7b5b2e6a7a26ac670576abab' => $baseDir . '/app/Helps/helps.php',
+    '87acc2665a666e546d6e83ab39c5dd62' => $baseDir . '/app/Helps/category.php',
 );

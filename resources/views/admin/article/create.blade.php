@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 ">
                 <div class="box box-default">
-                    <form action="" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                    <form action="{{route('adminArticleStore')}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
                         <div class="box-body pad">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
@@ -50,11 +50,7 @@
                                     <label for="selectArticleCategor" class="col-sm-3 control-label">分类:</label>
                                     <div class="col-sm-9">
                                         <select name="category" class="form-control" id="selectArticleCategor">
-                                            <option value="1">新闻</option>
-                                            <option value="2">新闻</option>
-                                            <option value="3">新闻</option>
-                                            <option value="4">新闻</option>
-                                            <option value="5">新闻</option>
+                                            {{!!$options!!}}
                                         </select>
                                     </div>
                                 </div>

@@ -1,7 +1,7 @@
 <?php
 //以下拉选项的形式展示子孙树
 if (!function_exists('CategoryOfOption')){
-    function CategoryOfOption($arr,$selected=0){
+    function categoryToOption($arr,$selected=0){
         $data = subTree($arr);
         $option = '<option value="0">|--顶级分类</option>';
         foreach ($data as $k => $v) {
