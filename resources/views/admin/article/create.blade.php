@@ -32,6 +32,7 @@
             <div class="col-md-12 col-sm-12 ">
                 <div class="box box-default">
                     <form action="{{route('adminArticleStore')}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                        {{csrf_field()}}
                         <div class="box-body pad">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
@@ -159,6 +160,16 @@
                                     <label for="inputAritcleKeyword" class="col-sm-3 control-label">关键字:</label>
                                     <div class="col-sm-9">
                                         <input type="text" name="keywords" class="form-control" id="inputAritcleKeyword" placeholder="请输入文章关键字">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAritcleTag" class="col-sm-3 control-label">标签</label>
+                                    <div class="col-sm-9">
+                                        <select name="tag" id="">
+                                            <option value="1">php</option>
+                                            <option value="2">apache</option>
+                                            <option value="3">mysql</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">

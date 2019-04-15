@@ -18,9 +18,9 @@ class ArticleController extends Controller
     	return view('admin.article.create',['options'=>$options]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        
+        dd($request);
     }
 
     public function edit($id)
