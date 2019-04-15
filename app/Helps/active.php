@@ -46,7 +46,7 @@ if (!function_exists('isContent')) {
             'adminMottoUpdate',
             'adminMottoDestory',
             'adminMediaIndex',
-            'adminMediaCreate',
+            'adminMediaUpload',
             'adminMediaEdit',
             'adminMediaStore',
             'adminMediaUpdate',
@@ -151,7 +151,7 @@ if (!function_exists('isMedia')) {
     {
         $data = [
             'adminMediaIndex',
-            'adminMediaCreate',
+            'adminMediaUpload',
             'adminMediaEdit',
             'adminMediaStore',
             'adminMediaUpdate',

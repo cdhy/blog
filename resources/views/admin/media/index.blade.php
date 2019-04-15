@@ -1,6 +1,6 @@
 @extends('admin.layout.main')
 
-@section('title','名人名言')
+@section('title','媒体管理')
 
 @section('content')
     <div class="content-wrapper">

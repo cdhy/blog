@@ -46,7 +46,7 @@ Route::group(['namespace'=>'Admin'],function(){
     Route::get('tag/show/{id}',['uses'=>'TagController@show','as'=>'adminTagShow']);
     Route::post('tag/destory/{id}',['uses'=>'TagController@destory','as'=>'adminTagDestory']);
     Route::get('media',['uses'=>'MediaController@index','as'=>'adminMediaIndex']);
-    Route::get('media/create',['uses'=>'MediaController@create','as'=>'adminMediaCreate']);
+    Route::get('media/upload',['uses'=>'MediaController@upload','as'=>'adminMediaUpload']);
     Route::post('media/store',['uses'=>'MediaController@store','as'=>'adminMediaStore']);
     Route::get('media/edit/{id}',['uses'=>'MediaController@edit','as'=>'adminMediaEdit']);
     Route::post('media/update/{id}',['uses'=>'MediaController@update','as'=>'adminMediaUpdate']);

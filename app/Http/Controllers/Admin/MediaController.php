@@ -11,4 +11,13 @@ class MediaController extends Controller
     {
         return view('admin.media.index');
     }
+
+    public function upload()
+    {
+        return view('admin.media.upload');
+    }
+    public function store(Request $request)
+    {
+        dd($request);
+    }
 }
