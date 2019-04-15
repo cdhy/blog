@@ -1,0 +1,230 @@
+@charset "UTF-8";
+html, body {
+  font-family: "Microsoft YaHei","微软雅黑","Helvetica Neue", Helvetica, STHeiTi,"黑体","宋体",sans-serif;
+}
+
+/*全局row调整*/
+.row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+ul, ol {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/*左侧边栏调整*/
+.sidebar-menu > li > a {
+  padding: 6px 5px 6px 10px;
+  display: block;
+}
+
+/*面包屑导航*/
+.content-header {
+  padding: 5px 10px 0 15px;
+}
+.content-header .breadcrumb {
+  float: none;
+  position: relative;
+  padding: 0;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.content-header .breadcrumb .active {
+  color: #222;
+}
+
+.content {
+  padding: 5px;
+}
+
+/*box head*/
+.box-header {
+  padding: 0 10px 10px 10px;
+}
+.box-header .box-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+.box-header .box-tools {
+  position: relative;
+  margin-left: 10px;
+}
+
+.box-footer {
+  padding: 5px;
+}
+
+/*表格样式调整*/
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  padding: 2px;
+  vertical-align: middle;
+}
+
+/*后台添加分类显示样式 */
+.listCategory {
+  min-height: 280px;
+}
+
+/*后台登录样式 */
+.login-logo {
+  margin-bottom: 0;
+}
+
+.form-control {
+  height: 30px;
+  padding: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.checkbox-inline,
+.radio-inline {
+  padding-left: 0px;
+}
+
+/*验证码*/
+.captcha {
+  pointer-events: auto;
+  height: 32px;
+}
+
+.login-box-msg {
+  padding-bottom: 10px;
+}
+
+/*添加文章样式*/
+/*缩略图样式*/
+ul.thumbnails {
+  max-height: 240px;
+  overflow-y: scroll;
+}
+
+.thumbnail {
+  margin-bottom: 0px;
+}
+
+.thumbnail img {
+  width: 110px;
+}
+
+#savebtn {
+  /* position:absolute;
+        top:0;
+        right:0;*/
+  text-align: center;
+}
+
+/*添加文件样式*/
+.p-a-l-50 {
+  position: absolute;
+  left: 50%;
+}
+
+/*选项卡设置*/
+.nav-tabs {
+  position: relative;
+  border-bottom: 2px solid #3c8dbc;
+  height: 25px;
+}
+
+table:not(.table) tr td {
+  padding: 4px 10px 0px 0px;
+  position: relative;
+  clear: both;
+}
+
+table th, table td {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.tab-pane .input-group:first-of-type {
+  margin-top: 1em;
+}
+
+.tab-pane .input-group {
+  margin-left: 2em;
+}
+
+.nav-tabs > li > a {
+  color: #6f6f6f;
+  font-size: 14px;
+  padding: 1px 17px;
+  overflow: hidden;
+  border: 1px solid #dfdfdf;
+  border-bottom: 0px solid #3c8dbc;
+  background: #efefef;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: #fff;
+  border: 1px solid transparent;
+  border-bottom: 0px solid transparent;
+  background: -moz-linear-gradient(top, #3c8dbc 0%, #3c8dbc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0% #3c8dbc), color-stop(100% #3c8dbc));
+  background: -webkit-linear-gradient(top, #3c8dbc 0%, #3c8dbc 100%);
+  background: -o-linear-gradient(top, #3c8dbc 0%, #3c8dbc 100%);
+  background: -ms-linear-gradient(top, #3c8dbc 0%, #3c8dbc 100%);
+  background: linear-gradient(to bottom, #3c8dbc 0%, #3c8dbc 100%);
+}
+
+.modal-header {
+  padding: 5px 10px;
+}
+
+.modal-body {
+  padding: 5px;
+}
+
+.modal-footer {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.h-btn, .h-btn-sm {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+.tab-pane .u-btn-group {
+  padding: 10px 0px 20px 0px;
+  border-top: 1px dotted #cecece;
+  margin-top: 20px;
+}
+
+.h-btn-primary {
+  border: 1px solid #71b5f9;
+  color: #5F5F5F;
+  outline: none !important;
+  background: #f5f5f5;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+}
+
+.h-btn-primary:hover,
+.h-btn-primary:active,
+.h-btn-primary:visited {
+  border: 1px solid #71b5f9;
+  background: #f5f5f5;
+  color: #71b5f9;
+}
+
+/*# sourceMappingURL=public.css.map */

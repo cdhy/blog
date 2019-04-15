@@ -12,10 +12,10 @@
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>
-            分类
-            <small>分类列表</small>
-        </h1>
+        {{--<h1>--}}
+            {{--分类--}}
+            {{--<small>分类列表</small>--}}
+        {{--</h1>--}}
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> 面板</a></li>
             <li>分类</li>

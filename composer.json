@@ -41,7 +41,8 @@
         ],
         "files":[
             "app/Helps/active.php",
-            "app/Helps/helps.php"
+            "app/Helps/helps.php",
+            "app/Helps/category.php"
         ]
     },
     "autoload-dev": {

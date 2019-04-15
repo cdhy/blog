@@ -20,10 +20,6 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>
-            文章
-            <small>文章列表</small>
-        </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> 面板</a></li>
             <li>文章</li>
@@ -80,7 +76,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal fade modal-dialog modal-lg" id="coverBrower" tabindex="-1" role="dialog" aria-labelledby="Cover Browser">
+                                <div class="modal fade in" id="coverBrower" tabindex="-1" role="dialog" aria-labelledby="Cover Browser">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">

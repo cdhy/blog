@@ -32,7 +32,7 @@
   <![endif]-->
   @section("style")
   @show
-  <link rel="stylesheet" href="{{asset('assets/css/backend.css?0.5')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/public.css')}}">
   <title>Blog后台管理 | @yield('title')</title>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">

@@ -6,10 +6,10 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-       	分类
-        <small>分类列表</small>
-      </h1>
+      {{--<h1>--}}
+       	{{--分类--}}
+        {{--<small>分类列表</small>--}}
+      {{--</h1>--}}
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> 面板</a></li>
         <li><a href="#">内容管理</a></li>
@@ -21,7 +21,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">所有分类</h3>
+              {{--<h3 class="box-title">所有分类</h3>--}}
               <div class="box-tools">
                 <div class="input-group input-group-sm" >
                 <a  class='btn  btn-success btn-sm' href="{{route('adminCategoryCreate')}}"><i class="fa fa-plus-square"></i> 添加分类</a>
@@ -63,8 +63,8 @@
 							<td>{{$category->template}}</td>
 							<td>{{$category->view}}</td>
 							<td>
-								<a href="" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> 编辑</a>
-								<a href="" class="btn btn-danger btn-xs"><i class="fa fa-recycle"></i> 删除</a>
+								<a href="" title="编辑"><i class="fa fa-pencil"></i></a>
+								<a href=""  title="删除" ><i class="fa fa-recycle"></i></a>
 							</td>
 						</tr>
 						@endforeach
